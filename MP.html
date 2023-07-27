@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="css/pico.min.css">
+  <link rel="stylesheet" href="MP.css">
+  <lin<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&family=Libre+Baskerville:wght@700&family=News+Cycle&family=Pragati+Narrow&family=Roboto+Condensed:wght@300&family=Roboto+Flex&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <title>作品紹介</title>
+ 
+
+</head>
+
+<body>
+  <main class="container">
+    <!-- <nav>
+      <ul>
+        <li><strong>Logo Brand</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#" role="button">Button</a></li>
+      </ul>
+    </nav> -->
+
+    <!-- <nav aria-label="breadcrumb">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">Page</a></li> -->
+      <!-- </ul>
+    </nav> -->
+
+    <div id="main">
+    <!-- <center><h1>figma作品</h1></center> -->
+    <h1>MP演習作品</h1>
+    
+
+        <div>
+          <p style="margin-top:40px;"></p>
+          <!-- <main class="wrap"> -->
+
+            
+            <div class="grid">
+               <img src="MP.png" alt="">
+               <img src="MP1-1.png" alt="">
+               <img src="MP1-2.png" alt="" >
+               </div>
+               <p style="margin-top:40px;">
+               <div class="grid">
+                <img src="MP1-3.png" alt="" >
+                <img src="MP1-4.png" alt="" >
+                <img src="MP1-5.png" alt="" >
+              </div>
+
+               
+          
+          <p style="margin-top:100px;">
+            <b>ノイズ</b></p>
+          <ul>
+              <li>ノイズを使ったプログラミング作品</li>
+              <li>図形は線のみを使用。色彩はグレースケールのみ。</li>
+              <li>クリックごとにグラフィックが更新されるプログラム</li>
+              <li>デザインの美しさを主に作成</li>
+          
+            </ul>
+
+           
+           
+          <p style="margin-top:50px;"></p>
+          <div style="border: 2px dashed;background-color: #505050;">
+            float angle = 0.0; <br> 
+            float myNoise = 0.0;  //ノイズの初期値<br>
+            float start = 0.0;  //myNoiseのスタート地点<br>
+            float step = 0.01;  //ステップの数値が少ないと変化が滑らかになる<br>
+            <br>
+            void setup() { <br>
+            size(400, 400);<br>
+            stroke(255,200); <br>
+   
+            }<br>
+            <br>
+            void draw() {<br>
+            background(0);<br>
+ 
+            translate(width/2, height/2);  //座標系を画面中央に移動<br>
+  
+            myNoise = start;  //myNoiseをスタート地点で初期化<br>
+ 
+            for (int x = 0; x < 200  ; x += 1) {<br>
+    
+            //ノイズを使ってy座標を設定<br>
+            float y = noise(myNoise)*380;<br>
+    
+            rotate(radians(30)); //座標系を回転<br>
+
+            line(x/1.5, 0, 1.5, y);<br>
+            //ランダムを使った場合は連続性がない<br>
+             //line(x, 0, x, random(height));<br>
+    
+ 
+             myNoise += step;   //ノイズの値を更新<br>
+    
+             angle += 0.5;<br>
+            if (angle >=360.0) angle = 0.0;<br>
+
+            }<br>
+            }<br>
+            <br>
+            void mousePressed() {<br>
+            start = random(10);  //myNoiseのスタート位置を変える<br>
+            } <br>
+          
+          
+            
+            </div>
+
+            <p style="margin-top:100px;"></p>
+          <p> <a href="home.html"><center><h5>Home</h5></center></a></p></p>
+
+          </div>
+          
+        </div>
+      </div>
+  </div>
+  </main>
+</body>
+
+</html>
+    
+  </div>
+
+
+  </main>
+</body>
+
+</html>

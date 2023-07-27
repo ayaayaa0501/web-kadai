@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="css/pico.min.css">
+  <link rel="stylesheet" href="MP2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&family=Libre+Baskerville:wght@700&family=News+Cycle&family=Pragati+Narrow&family=Roboto+Condensed:wght@300&family=Roboto+Flex&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <title>作品紹介</title>
+ 
+
+</head>
+
+<body>
+  <main class="container">
+    <!-- <nav>
+      <ul>
+        <li><strong>Logo Brand</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#" role="button">Button</a></li>
+      </ul>
+    </nav> -->
+
+    <!-- <nav aria-label="breadcrumb">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">Page</a></li> -->
+      <!-- </ul>
+    </nav> -->
+
+    <div id="main">
+    <!-- <center><h1>figma作品</h1></center> -->
+    <h1>MP演習作品</h1>
+    
+
+        <div>
+          <h2></h2>
+          <img src="MP2.png" width="50%">
+        
+          <p style="margin-top:100px;">
+            <b>拡散アニメーション作品</b></p>
+          <ul>
+              <li>拡散するアニメーション</li>
+              <li>内トロコイドを使用し徐々に拡大される</li>
+              <li>ランダムで色が変化（寒色系）</li>
+              <li>デザインの美しさを主に作成</li>
+              
+            </ul>
+
+            <p style="margin-top:50px;"></p>
+          <div style="border: 2px dashed;background-color: #505050;">
+            float A6 = -5.0;//振幅<br>
+            float t;//右<br>
+            float t0;//右<br>
+            float t1;//経過時間<br>
+            float rad1 = 0.00001;  //スピード//右<br>
+            float rad2 = 0.00000001; //右<br>
+            <br>
+            float rad3 = 0.3;  //スピード<br>
+            float rad5 = 0.008;<br>
+            float scale1 =1.0;//右<br>
+            float scale2 =1.0;<br>
+            float rad = TWO_PI/180.0;<br>
+            <br>
+            void setup() {<br>
+              size(400, 400);<br>
+              background(0);<br>
+              noStroke();<br>
+              
+            }<br>
+            <br>
+            void draw() {<br>
+            
+            
+              //右（分散）<br>
+              x = (A1 - A2)*cos(t) +A2*cos(((A1 - A2)/A2)*t);<br>
+              y = (A1 -A2)*sin(t) - A2*sin(((A1 - A2)/A2)*t);<br>
+            
+            
+              fill(random(0,100),random(100,255),random(200,255));<br>
+              rect(x*scale1 + width/2+ width/200, y*scale1 + height/2, 1, 1);<br>
+            
+              t += rad;    //時間を進める<br>
+              scale1 += 0.0015; //徐々に拡大<br>
+            
+              t += rad1;    //時間を進める<br>
+              scale1 += 0.0025;  //徐々に拡大<br>
+            
+              A2 -= rad2;    //A2が0未満になったら増減を反転させる<br>
+            
+              if (A2 < 3.5) rad2 = -rad2;<br>
+            
+            
+            }<br>
+            
+
+            </div>
+          
+
+            <p style="margin-top:40px;"></p>
+            <video controls width="600" height="600" src="MP.MOV"></video>
+
+          <p> <a href="home.html"><h5>Home</h5></a></p></p>
+
+          
+          
+        </div>
+      </div>
+  </div>
+  </main>
+</body>
+
+</html>
+    
+  </div>
+
+
+  </main>
+</body>
+
+</html>
